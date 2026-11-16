@@ -288,7 +288,7 @@ function footText(upd,fallback){
     +' De grafieken horen bij het tabblad Collection. Een klik op een cover opent de release op Discogs.';
   if(fallback)return t+' Dit is de ingebakken versie van de gegevens: data.json kon niet worden geladen.';
   var d=upd?new Date(upd):null;
-  if(d&&!isNaN(d))t+=' Gegevens laatst gewijzigd op '+d.toLocaleDateString('nl-BE',{day:'numeric',month:'long',year:'numeric'})+'.';
+  if(d&&!isNaN(d))t+=' Gegevens laatst gewijzigd op '+d.toLocaleDateString('nl-BE',{day:'numeric',month:'long',year:'numeric'})+' om '+d.toLocaleTimeString('nl-BE',{hour:'2-digit',minute:'2-digit'})+'.';
   return t;
 }
 function boot(data,fallback){
